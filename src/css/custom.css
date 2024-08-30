@@ -6,25 +6,139 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #20C997;
+  --ifm-color-primary-dark: #1CB589;
+  --ifm-color-primary-darker: #1AA981;
+  --ifm-color-primary-darkest: #158C6A;
+  --ifm-color-primary-light: #24DDA5;
+  --ifm-color-primary-lighter: #30DFAA;
+  --ifm-color-primary-lightest: #4FE3B8;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Light mode here */
+:root {
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-background-color: #f0f0f0;
+  --ifm-font-color-base: #333333;
+  --ifm-heading-color: #000000;
+  --ifm-link-color: #20C997;
+  --ifm-menu-color: #333333;
+  --ifm-toc-link-color: #666666;
+}
+
+/* Dark mode here */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-background-color: #0D1117;
+  --ifm-navbar-background-color: rgba(13, 17, 23, 0.8);
+  --ifm-footer-background-color: #0D1117;
+  --ifm-font-color-base: #E6E6E6;
+  --ifm-heading-color: #FFFFFF;
+  --ifm-link-color: #20C997;
+  --ifm-menu-color: #E6E6E6;
+  --ifm-toc-link-color: #CCCCCC;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* All other styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, #0D1117 0%, #1A3B47 100%);
+}
+
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .navbar {
+  backdrop-filter: blur(10px);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+.button {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(32, 201, 151, 0.2);
+}
+
+/* Body style */
+[data-theme='dark'] .main-wrapper {
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.8) 0%, rgba(26, 59, 71, 0.8) 100%);
+}
+
+/* Sidebar */
+[data-theme='dark'] .menu {
+  background-color: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Code blocks */
+.prism-code {
+  border-radius: 8px;
+}
+
+[data-theme='dark'] .prism-code {
+  background-color: #1E2A3A !important;
+}
+
+/* TOC */
+[data-theme='dark'] .table-of-contents {
+  background-color: rgba(13, 17, 23, 0.6);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #0D1117;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .card {
+  background-color: rgba(26, 59, 71, 0.4);
+  border: 1px solid rgba(32, 201, 151, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(32, 201, 151, 0.15);
+}
+
+a {
+  color: var(--ifm-link-color);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-lighter);
+  text-decoration: none;
+}
+
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3, 
+[data-theme='dark'] h4, 
+[data-theme='dark'] h5, 
+[data-theme='dark'] h6 {
+  text-shadow: 0 0 10px rgba(32, 201, 151, 0.3);
 }
