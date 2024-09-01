@@ -1,23 +1,194 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.main {
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.8) 0%, rgba(26, 59, 71, 0.8) 100%);
+  color: var(--ifm-font-color-base);
+  padding: 2rem 1rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.heroBanner {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.newBadge {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: .5rem 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.newBadge span {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  padding-top: 40px;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+  text-shadow: 0 0 10px rgba(32, 201, 151, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mainLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.mainLink {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--ifm-color-white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mainLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.linkIcon {
+  margin-right: 1rem;
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-color-white);
+}
+
+.chevron {
+  margin-left: auto;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.developerResources {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-white);
+}
+
+.sectionSubtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resourceCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--ifm-color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.resourceCard:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.resourceIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.resourceCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-white);
+}
+
+.resourceCard p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .mainLinks {
+      grid-template-columns: 1fr;
+  }
+
+  .resourceGrid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .title {
+      font-size: 2.5rem;
+  }
+
+  .subtitle {
+      font-size: 1rem;
+      max-width: 90%;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 480px) {
+  .heroBanner {
+      padding: 1rem 0;
+  }
+
+  .newBadge {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+  }
+
+  .title {
+      font-size: 2rem;
+      padding-top: 20px;
+  }
+
+  .subtitle {
+      font-size: 0.9rem;
+  }
+
+  .mainLink {
+      padding: 0.8rem 1rem;
+  }
+
+  .linkIcon {
+      width: 20px;
+      height: 20px;
+  }
+
+  .resourceCard h3 {
+      font-size: 1.1rem;
+  }
+
+  .resourceCard p {
+      font-size: 0.8rem;
+  }
 }

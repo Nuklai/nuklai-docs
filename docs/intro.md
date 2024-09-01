@@ -2,46 +2,21 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Nuklai is a collaborative data marketplace and the infrastructure provider for data ecosystems. It brings together the power of community-driven data analysis with the datasets of some of the most successful modern businesses. The marketplace allows both grassroots data enthusiasts, SMEs and institutional partners to access new data sources as well as ways to put your own untapped data to use. This allows them to gain new insights, find new revenue streams within the boundaries of regulations as well as stay within the framework of their own data governance.
 
-## Getting Started
+Our vision is to fuel the new data economy. We provide an easy-to-use platform for sharing, requesting and understanding data. This uncovers key insights, improves processes, and opens up new business opportunities while supporting next-generation Large Language Models and AI. All supported by a fair system that rewards those who publish or contribute data while charging those who consume data.
 
-Get started by **creating a new site**.
+Bringing together the power of artificial intelligence and blockchain, Nuklai will accelerate the tokenization of real-world assets (RWA). It will facilitate new avenues for the vast amounts of data these assets will rely on for their valuation and provide the infrastructure for this data to be utilized, monetized, and enhanced by other players.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+By developing the Nuklai data ecosystem on its own public blockchain, along with the use of subnet technology for creating private data consortiums Nuklai is able to provide the benefits of trustless access and sharing of data to the fragmented data landscape. At the same time, by empowering Decentralized Physical Infrastructure Network (DePIN) with standardized data sources Nuklai will enable companies to tap into the data ecosystem produced by the emerging Economy of Things (EoT) industry.
 
-### What you'll need
+Nuklai, as its name suggests, is the nucleus, the core of the new data economy. It will unify the scattered segments of the data landscape, further enhancing and advancing the capabilities of next-generation large language models (LLMs) and artificial intelligence (AI).
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+If you want to learn more about our network and ecosystem, read our [Nuklai Network Economics](https://www.nukl.ai/resources/network-economics)
 
-## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+<div class="center-docs-images">
+    <img src="/img/whatis.webp" alt="What is Nuklai" width="700" />
+</div>
