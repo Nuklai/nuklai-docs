@@ -6,7 +6,7 @@ on:
       - dev
       - staging
       - demo
-      - prod
+      - master
 
 permissions:
   id-token: write
