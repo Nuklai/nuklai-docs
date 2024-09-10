@@ -15,9 +15,9 @@ permissions:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    environment: ${{ github.ref == 'refs/heads/prod' && 'prod' || github.ref == 'refs/heads/staging' && 'staging' || github.ref == 'refs/heads/dev' && 'dev' }}
+    environment: ${{ github.ref == 'refs/heads/master' && 'prod' || github.ref == 'refs/heads/staging' && 'staging' || github.ref == 'refs/heads/dev' && 'dev' }}
     env:
-      PRODUCT: wallet
+      PRODUCT: docs
       APPLICATION: frontend
       AWS_DEFAULT_REGION: eu-west-1
       BUILD_DIR: ./build
@@ -33,40 +33,31 @@ jobs:
         if: github.ref == 'refs/heads/dev'
         run: |
           echo "ENV=dev" >> $GITHUB_ENV
-          echo "AWS_ACCOUNT_ID=722484512985" >> $GITHUB_ENV
-          echo "AWS_S3_BUCKET=wallet-frontend-dev-722484512985-eu-west-1" >> $GITHUB_ENV
-          echo "VITE_BASE_API_URL=https://api-devnet.nuklaivm-dev.net:9650"  >> $GITHUB_ENV
-          echo "VITE_BLOCKCHAIN_ID=JopL8T69GBW1orW4ZkJ1TBRzF97KXaY8e64atDA1v2M12SNqm" >> $GITHUB_ENV
-          echo "VITE_FAUCET_URL=https://service.faucet.helix.nuklaivm-dev.net/request-faucet" >> $GITHUB_ENV
+          echo "AWS_ACCOUNT_ID=759055860286" >> $GITHUB_ENV
+          echo "AWS_S3_BUCKET=docs-frontend-dev-759055860286-eu-west-1" >> $GITHUB_ENV
 
       - name: Set staging ENV
         if: github.ref == 'refs/heads/staging'
         run: |
           echo "ENV=staging" >> $GITHUB_ENV
-          echo "AWS_ACCOUNT_ID=722484512985" >> $GITHUB_ENV
-          echo "AWS_S3_BUCKET=wallet-frontend-staging-722484512985-eu-west-1" >> $GITHUB_ENV
-          echo "VITE_BASE_API_URL=https://api-devnet.nuklaivm-dev.net:9650"  >> $GITHUB_ENV
-          echo "VITE_BLOCKCHAIN_ID=JopL8T69GBW1orW4ZkJ1TBRzF97KXaY8e64atDA1v2M12SNqm" >> $GITHUB_ENV
-          echo "VITE_FAUCET_URL=https://service.faucet.helix.nuklaivm-dev.net/request-faucet" >> $GITHUB_ENV
+          echo "AWS_ACCOUNT_ID=924226199168" >> $GITHUB_ENV
+          echo "AWS_S3_BUCKET=docs-frontend-staging-924226199168-eu-west-1" >> $GITHUB_ENV
          
       - name: Set prod ENV
-        if: github.ref == 'refs/heads/prod'
+        if: github.ref == 'refs/heads/master'
         run: |
           echo "ENV=prod" >> $GITHUB_ENV
-          echo "AWS_ACCOUNT_ID=146563424647" >> $GITHUB_ENV
-          echo "AWS_S3_BUCKET=wallet-frontend-prod-146563424647-eu-west-1" >> $GITHUB_ENV
-          echo "VITE_BASE_API_URL=https://api-devnet.nuklaivm-dev.net:9650"  >> $GITHUB_ENV
-          echo "VITE_BLOCKCHAIN_ID=JopL8T69GBW1orW4ZkJ1TBRzF97KXaY8e64atDA1v2M12SNqm" >> $GITHUB_ENV
-          echo "VITE_FAUCET_URL=https://service.faucet.helix.nuklaivm-dev.net/request-faucet" >> $GITHUB_ENV
+          echo "AWS_ACCOUNT_ID=255525589248" >> $GITHUB_ENV
+          echo "AWS_S3_BUCKET=docs-frontend-prod-255525589248-eu-west-1" >> $GITHUB_ENV
 
       - name: Prepare .npmrc
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> .npmrc
           cat .npmrc
-      - name: Enable Corepack
-        run: corepack enable
+
       - name: Install dependencies
         run: yarn install --immutable
+        
       - name: Building sources
         run: CI=false yarn build
 
