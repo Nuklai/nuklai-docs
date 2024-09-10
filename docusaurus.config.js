@@ -93,8 +93,8 @@ const config = {
           },
           // Coming back to this
           // { to: '/blog', label: 'Blog', position: 'left' },
-          { href: 'https://app.nukl.ai/', label: 'About', position: 'right' },
-          { href: 'https://www.nukl.ai/about', label: 'Application', position: 'right' },
+          { href: 'https://www.nukl.ai/about', label: 'About', position: 'right' },
+          { href: 'https://app.nukl.ai/', label: 'Application', position: 'right' },
           { href: 'https://github.com/nuklai', label: 'GitHub', position: 'right' },
         ],
       },
