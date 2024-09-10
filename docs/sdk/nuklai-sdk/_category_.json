@@ -1,8 +1,8 @@
 {
-  "label": "Nuklai SDK",
-  "position": 2,
+  "label": "NuklaiSDK ",
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "Learn about the Nuklai SDK and how to make use of it."
   }
 }

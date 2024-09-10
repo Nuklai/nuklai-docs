@@ -1,8 +1,8 @@
 {
-  "label": "Hyperchain SDK",
-  "position": 1,
+  "label": "HyperchainSDK ",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "Learn about the Hyperchain SDK and how to make use of it."
   }
 }
