@@ -117,9 +117,4 @@ We welcome contributions to both the Nuklai Hyperchain JS SDK and its documentat
 - **Community Chat**: [Join our Discord server](https://discord.com/invite/yJf3KAavbH)
 - **Twitter**: Follow [@NuklaiData](https://twitter.com/NuklaiData) for updates
 
-## Code of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
-
 Thank you for contributing to Hyperchain JS SDK and its documentation!
