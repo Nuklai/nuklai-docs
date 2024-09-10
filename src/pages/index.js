@@ -50,14 +50,14 @@ function MainLinks() {
       to: '/docs/category/navigating-the-marketplace',
     },
     {
-      title: 'Build on Nuklai',
+      title: 'Building on Nuklai',
       icon: CodeBracketIcon,
-      to: '/docs/category/sdk',
+      to: '/docs/category/developer-sdks',
     },
     {
-      title: 'Developer Resources (Articles)',
+      title: 'Developer Resources (Tutorials)',
       icon: CodeBracketIcon,
-      to: '/blog',
+      to: '/docs/sdk/nuklai-sdk/examples',
     },
   ]
 
@@ -74,60 +74,61 @@ function MainLinks() {
   )
 }
 
-function Feature({ title, description, icon: Icon }) {
-  return (
-    <div className={styles.featureCard}>
-      <Icon className={styles.featureIcon} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  )
-}
+// Coming back to this
+// function Feature({ title, description, icon: Icon }) {
+//   return (
+//     <div className={styles.featureCard}>
+//       <Icon className={styles.featureIcon} />
+//       <h3>{title}</h3>
+//       <p>{description}</p>
+//     </div>
+//   )
+// }
 
-function DeveloperResources() {
+function BlogPosts() {
   const resources = [
     {
       title: "Nuklai and Filecoin Foundation Collaborate to Archive the World's Data",
       icon: ArrowTrendingUpIcon,
       description: 'TLDR: Nuklai and Filecoin Foundation collaborate to archive global data, empowering AI with contextual data understanding...',
-      url: 'https://example.com/nuklai-filecoin-collaboration',
+      url: 'https://www.nukl.ai/blog/nuklai-and-filecoin-foundation-collaborate-to-archive-the-worlds-data',
     },
     {
       title: 'Smart Data City Roadmap: Vision for 2024/25',
       icon: ArrowTrendingUpIcon,
       description: 'The Smart Data Layer 1 foundation enhances data governance and security for collaboration while empowering developers to create innovative projects on top of the Nuklai netw...',
-      url: 'https://example.com/smart-data-city-roadmap',
+      url: 'https://www.nukl.ai/blog/smart-data-city-roadmap',
     },
     {
       title: 'Nuklai Bitcoin Campaign, Rate Web3 Projects and Testnet',
       icon: ArrowTrendingUpIcon,
       description: 'With almost 3000 contributions, the first phase of the Nuklai Bitcoin Research Campaign has come to a close. Now participants can antici...',
-      url: 'https://example.com/nuklai-bitcoin-campaign',
+      url: 'https://www.nukl.ai/blog/development-update-april',
     },
     {
       title: 'Submit, Exchange, and Collaborate Using World Class Data',
       icon: ArrowTrendingUpIcon,
       description: 'Our collaborative data marketplace and data-sharing infrastructure is set to unify the world of data, offering unparalleled opport...',
-      url: 'https://example.com/collaborate-world-class-data',
+      url: 'https://www.nukl.ai/blog/nuklai-beta-is-here-submit-exchange-and-collaborate-using-world-class-data',
     },
     {
       title: 'Submit, Exchange, and Collaborate Using World Class Data',
       icon: ArrowTrendingUpIcon,
-      description: 'Our collaborative data marketplace and data-sharing infrastructure is set to unify the world of data, offering unparalleled opport...',
-      url: 'https://example.com/collaborate-world-class-data',
+      description: 'We’re beyond humbled by the record-breaking sale of the NAI token and the faith of our community in the future of blockchain-based data economies. You can learn about the remaining funding round for NAI here.',
+      url: 'https://www.nukl.ai/blog/calling-developers-join-nuklais-upcoming-bug-bounty-program',
     },
     {
-      title: 'Submit, Exchange, and Collaborate Using World Class Data',
+      title: 'AllianceBlock Partners With Crunchbase To Bring Powerful Business Data To DeFi For The First Time',
       icon: ArrowTrendingUpIcon,
       description: 'Our collaborative data marketplace and data-sharing infrastructure is set to unify the world of data, offering unparalleled opport...',
-      url: 'https://example.com/collaborate-world-class-data',
+      url: 'https://www.nukl.ai/blog/alliance-block-partners-with-crunchbase-to-bring-powerful-business-data-to-de-fi-for-the-first-time',
     },
   ]
 
   return (
     <section className={styles.developerResources}>
-      <h2 className={styles.sectionTitle}>Developer Resources</h2>
-      <p className={styles.sectionSubtitle}>For developers who are looking to build highly scalable applications</p>
+      <h2 className={styles.sectionTitle}>Blog Posts</h2>
+      <p className={styles.sectionSubtitle}>Get up to speed with our latest updates form the Nuklai Marketplace & the NuklaiVM.</p>
       <div className={styles.resourceGrid}>
         {resources.map((resource, idx) => (
           <a key={idx} href={resource.url} className={styles.resourceCard} target="_blank" rel="noopener noreferrer">
@@ -148,7 +149,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomepageHeader />
         <MainLinks />
-        <DeveloperResources />
+        <BlogPosts />
       </main>
       <CustomFooter />
     </Layout>
