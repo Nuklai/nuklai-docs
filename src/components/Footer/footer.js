@@ -28,16 +28,16 @@ export default function CustomFooter() {
           <div className={styles.socialSection}>
             <h4>Social</h4>
             <div className={styles.socialIcons}>
-              <Link to="#" className={styles.socialIcon}>
+              <Link to="https://discord.com/invite/nuklai" className={styles.socialIcon}>
                 <FaDiscord />
               </Link>
-              <Link to="#" className={styles.socialIcon}>
+              <Link to="https://www.linkedin.com/company/nuklai/" className={styles.socialIcon}>
                 <FaLinkedin />
               </Link>
-              <Link to="#" className={styles.socialIcon}>
+              <Link to="https://twitter.com/NuklaiData" className={styles.socialIcon}>
                 <FaTwitter />
               </Link>
-              <Link to="#" className={styles.socialIcon}>
+              <Link to="https://t.me/NuklaiOfficial" className={styles.socialIcon}>
                 <FaTelegram />
               </Link>
             </div>
