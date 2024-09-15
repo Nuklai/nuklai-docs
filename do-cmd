@@ -1,0 +1,7 @@
+docker run --platform linux/amd64 -it --env-file=.env \
+-e "CONFIG=$(cat config.json | jq -c)" \
+-e "DEBUG=1" -e "LOG_LEVEL=DEBUG" -e "VERBOSE=1" \
+algolia/docsearch-scraper:latest
+
+
+# algolia sync
