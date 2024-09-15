@@ -114,7 +114,7 @@ const config = {
           },
           {
             type: 'search',
-            position: 'left',
+            position: 'right',
           },
           // Coming back to this
           // { to: '/blog', label: 'Blog', position: 'left' },
