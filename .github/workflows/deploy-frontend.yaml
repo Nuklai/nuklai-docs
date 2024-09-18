@@ -21,6 +21,9 @@ jobs:
       APPLICATION: frontend
       AWS_DEFAULT_REGION: eu-west-1
       BUILD_DIR: ./build
+      ALGOLIA_API_KEY: ${{ vars.ALGOLIA_API_KEY }}
+      ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+      ALGOLIA_INDEX_NAME: ${{ vars.ALGOLIA_INDEX_NAME }}
 
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +45,7 @@ jobs:
           echo "ENV=staging" >> $GITHUB_ENV
           echo "AWS_ACCOUNT_ID=924226199168" >> $GITHUB_ENV
           echo "AWS_S3_BUCKET=docs-frontend-staging-924226199168-eu-west-1" >> $GITHUB_ENV
-         
+
       - name: Set prod ENV
         if: github.ref == 'refs/heads/master'
         run: |
