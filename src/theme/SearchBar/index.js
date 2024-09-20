@@ -10,7 +10,7 @@ export default function SearchBar() {
   const { algolia } = useThemeConfig();
 
   return (
-    <div className="container">
+    <div className=".nav-container">
       <DocSearch
         appId={algolia.appId}
         apiKey={algolia.apiKey}
